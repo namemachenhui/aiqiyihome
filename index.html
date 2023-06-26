@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>爱奇艺-在线视频网站-海量正版高清视频在线观看</title>
+    <!-- <link rel="icon" href="./images/imgs1/tagpage-icon.png" /> -->
+    <link rel="stylesheet" href="./css/reset.min.css" />
+    <link rel="stylesheet" href="./iconfont/iconfont.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <style>
+      * {
+        /* all:unset; */
+        /* all: initial; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 顶部 -->
+      <div class="top">
+        <!-- 顶部轮播部分 -->
+        <div class="topbanner">
+          <!-- 纯色轮播背景 -->
+          <div class="banner_bg_purecolor">
+            <div></div>
+          </div>
+          <!-- 顶部大图轮播 -->
+          <div class="banner_content_img">
+            <div id="mySwiperBanner1" class="swiper">
+              <div
+                class="topimg_mask1 topimg_mask"
+                style="box-shadow: inset 0px 0px 15px 15px #363840"
+              ></div>
+              <div
+                class="topimg_mask2 topimg_mask"
+                style="box-shadow: inset 0px 0px 30px 30px #363840"
+              ></div>
+              <div
+                class="topimg_mask3 topimg_mask"
+                style="box-shadow: inset 0px 0px 150px 175px #363840"
+              ></div>
+              <div class="swiper-wrapper"></div>
+            </div>
+            <!-- 顶部轮播菜单栏 -->
+            <ul id="changelist"></ul>
+          </div>
+        </div>
+        <!-- 顶部导航 -->
+        <div class="topheader">
+          <div class="topNav">
+            <a class="navLogo" href=""
+              ><img src="./images/imgs1/01topnav-logo.svg" alt=""
+            /></a>
+            <!-- 顶部导航频道列表 -->
+            <ul class="leftpart_nav">
+              <a href=""><li>首页</li></a>
+              <a href=""><li>电视剧</li></a>
+              <a href=""><li>电影</li></a>
+              <a href=""><li>云影院</li></a>
+              <a href=""><li>会员中心</li></a>
+              <!-- 首页导航更多频道选项 -->
+              <li class="moreNav">
+                <em class="moreChannel_icon"></em>
+                <em class="triangle black_little_triangle"></em>
+                <div class="moreChannel_sect">
+                  <a href="">综艺</a>
+                  <a href="">儿童</a>
+                  <a href="">动漫</a>
+                  <a href="">游戏</a>
+                  <a href="">纪录片</a>
+                  <em class="divide_line"></em>
+                  <a href="">体育</a>
+                  <a href="">知识</a>
+                  <a href="">直播</a>
+                  <a href="">小说</a>
+                  <a href="">漫画</a>
+                  <a href="">风云榜</a>
+                  <a href="">新片</a>
+                  <a href="">公益</a>
+                  <a href="">VR</a>
+                  <em class="divide_line"></em>
+                  <a href="">即刻热点</a>
+                  <a href="">娱乐</a>
+                  <a href="">音乐</a>
+                  <a href="">搞笑</a>
+                  <a href="">军事</a>
+                  <a href="">汽车</a>
+                  <a href="">资讯</a>
+                  <a href="">生活</a>
+                  <a href="">母婴</a>
+                  <a href="">健康</a>
+                </div>
+              </li>
+            </ul>
+            <!-- 顶部导航右边部分 -->
+            <div class="rightpart_nav">
+              <!-- 天气 -->
+              <div class="wheather">
+                <a href="">
+                  <img src="./images/imgs1/wheather.png" alt="" />
+                  <p class="temperature">19°</p>
+                  <!-- 天气详情下拉 -->
+                  <div class="detailed_whether" style="display: none">
+                    <em class="triangle black_little_triangle"></em>
+                    <!-- 地点时间 -->
+                    <div>
+                      <span class="address">
+                        <em class="location_icon"></em>北京市昌平区
+                      </span>
+                      <span class="refresh">
+                        <em class="refresh_icon"></em>2023/06/09 1小时内更新
+                      </span>
+                    </div>
+                    <!-- 今明天气 -->
+                    <div>
+                      <div class="rightpart_wheather today_wheather">
+                        <span class="wheather_icon"></span>
+                        <p>今日 31/17°</p>
+                        <p>晴<span>24 优</span></p>
+                      </div>
+                      <div class="leftpart_wheather tomorrow_wheather">
+                        <p>明日 31/19°</p>
+                        <p>小雨<span>53 良</span></p>
+                      </div>
+                    </div>
+                    <!-- 当日天气变化 -->
+                    <div>
+                      <span>24小时天气</span>
+                      <span
+                        ><em class="former_halfday"></em
+                        ><em class="latter_halfday"></em
+                      ></span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- 搜索 -->
+              <div class="searchInput">
+                <input type="text" placeholder="花戎" />
+                <span>
+                  <a href="">
+                    <span class="iconfont">&#xe752;</span>
+                  </a>
+                </span>
+                <!-- 搜索热榜 -->
+                <ul class="hotsearch" style="display: none">
+                  <!-- 一共十个,循环渲染 -->
+                  <a href="">
+                    <li><em>1</em>奔跑吧第七季</li>
+                  </a>
+                </ul>
+                <em class="search_icon"></em>
+              </div>
+              <!-- 成为vip -->
+              <div class="toBeVip">
+                <a href="">
+                  <span class="iconfont">&#xe60e;</span>
+                  <span>首月特惠</span>
+                  <div class="draw_function_scope"></div>
+                  <!-- 下拉 -->
+                  <div class="draw_more" style="display: none">
+                    <em class="triangle black_little_triangle"></em>
+                    <div class="new_custom">新客首月十二元起</div>
+                    <div class="vip_content">
+                      <div class="vip_content_left">
+                        <p><em></em> <span>VIP特权</span></p>
+                        <p><em></em> <span>VIP特权</span></p>
+                        <p><em></em> <span>VIP特权</span></p>
+                        <p><em></em> <span>VIP特权</span></p>
+                      </div>
+                      <div class="vip_content_right">
+                        <img
+                          class="QR_code erweima"
+                          src="./images/imgs1/erweima.png"
+                          alt=""
+                        />
+                        <div><em></em> <em></em> 支付宝/微信</div>
+                        <div>直接扫码购买</div>
+                      </div>
+                    </div>
+                    <div class="vip_content_bottom btn_activate">立即开通</div>
+                  </div>
+                </a>
+              </div>
+              <!-- 游戏 -->
+              <div class="game">
+                <em></em>
+                <span>游戏</span>
+                <div class="draw_function_scope"></div>
+                <!-- 下拉 -->
+                <div class="draw_more" style="display: none">
+                  <em class="triangle black_little_triangle"></em>
+                  <ul>
+                    <li>
+                      <a href=""
+                        ><img src="./images/imgs1/top-game-01.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><img src="./images/imgs1/top-game-02.png" alt=""
+                      /></a>
+                    </li>
+                    <li>
+                      <a href=""
+                        ><img src="./images/imgs1/top-game-03.png" alt=""
+                      /></a>
+                    </li>
+                  </ul>
+                  <div><a href="">查看更多</a></div>
+                </div>
+              </div>
+              <!-- 上传 -->
+              <div class="upload">
+                <em></em>
+                <span>上传</span>
+                <div class="draw_function_scope"></div>
+                <!-- 下拉 -->
+                <div class="draw_more" style="display: none">
+                  <em class="black_little_triangle"></em>
+                  <div class="launch">
+                    <em class="iconfont">&#xec09;</em><span>发布作品</span>
+                  </div>
+                  <div class="manage">
+                    <em class="iconfont">&#xe60d;</em><span>作品管理</span>
+                  </div>
+                  <div class="account">
+                    <em class="iconfont">&#xe68e;</em><span>爱奇艺IQ号</span>
+                  </div>
+                  <div class="mySpace">
+                    <em class="iconfont">&#xe678;</em><span>我的空间</span>
+                  </div>
+                </div>
+              </div>
+              <!-- 客户端 -->
+              <div class="client">
+                <em></em>
+                <span>客户端</span>
+                <div class="draw_function_scope"></div>
+                <div class="draw_more" style="display: none">
+                  <em class="triangle black_little_triangle"></em>
+                  <div class="client_introduce">
+                    <img src="./images/imgs1/aqy-client.png" alt="" />
+                    <p>
+                      使用Windows客户端 <br />
+                      享更佳视听体验
+                    </p>
+                  </div>
+                  <div class="client_content">
+                    <span>杜比音效</span>
+                    <span>4K视频</span>
+                    <span>预约下载</span>
+                  </div>
+                  <div class="immdiate_try_client">立即体验</div>
+                  <div class="query_to_more">查看更多</div>
+                </div>
+              </div>
+              <!-- 看过 -->
+              <div class="hasWatched">
+                <em></em>
+                <span>看过</span>
+                <div class="draw_function_scope"></div>
+                <div class="draw_more" style="display: none">
+                  <em class="triangle black_little_triangle"></em>
+                  <div class="hasWatched_top_menu">
+                    <div
+                      class="real_watch_history watched_item watched_selected"
+                    >
+                      历史
+                      <span class="watched_tabheader_bottomline"></span>
+                    </div>
+                    <div class="video_collect watched_item">
+                      收藏
+                      <span class="watched_tabheader_bottomline"></span>
+                    </div>
+                    <div class="watched_reserve watched_item">
+                      预约<span class="watched_tabheader_bottomline"></span>
+                    </div>
+                  </div>
+                  <div class="when_watched_blink">
+                    <div>
+                      <img
+                        src="./images/imgs1/top-history-whennone.png"
+                        alt=""
+                      />
+                      <p>登录可同步观看历史</p>
+                      <div class="immdiate_login">立即登录</div>
+                    </div>
+                  </div>
+                  <div class="goin_personal_center">
+                    进入个人中心
+                    <span
+                      style="
+                        display: inline-block;
+                        transform: scale(1, 0.8) translateY(-1px);
+                      "
+                      >〉</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- 登录 -->
+              <div class="personal">
+                <a href="">
+                  <img src="./images/imgs1/top-personal.png" alt="" />
+                  <span>登录</span>
+                </a>
+                <div class="draw_more" style="display: none">
+                  <em class="triangle black_little_triangle"></em>
+                  <div class="person_draw_top">
+                    <img src="./images/imgs1/top-personal-draw.png" alt="" />
+                    <div>
+                      <div class="first_line">
+                        立即登录
+                        <span
+                          style="
+                            display: inline-block;
+                            transform: scale(1, 0.8) translateY(-1px);
+                          "
+                          >〉</span
+                        >
+                      </div>
+                      <div class="second_line">
+                        观看历史永相随 新剧热剧及时追
+                      </div>
+                    </div>
+                  </div>
+                  <div class="person_draw_bottom">
+                    <div>
+                      <div class="first_line">
+                        开通VIP会员
+                        <span
+                          style="
+                            display: inline-block;
+                            transform: scale(1, 0.8) translateY(-1px);
+                          "
+                          >〉</span
+                        >
+                      </div>
+                      <div class="second_line">
+                        <span class="member_benefits"><em></em>广告特权</span>
+                        <span class="member_benefits"><em></em>海量内容</span>
+                        <span class="member_benefits"><em></em>高清1080P</span>
+                      </div>
+                    </div>
+                    <div class="btn_activate">
+                      立即开通
+                      <span>新客首月特惠</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="top_placeholder"></div> -->
+      <!-- 主体 -->
+      <div class="main_bg">
+        <div class="main_body">
+          <div class="main_wrapper">
+            <!-- 猜你喜欢板块 -->
+            <div class="allkinds_section guess_you_like">
+              <!-- 板块头 -->
+              <div class="section_header gyl_header">
+                <h3 class="section_title gyl_title">猜你喜欢</h3>
+
+                <!-- 通用板块轮播按钮 -->
+                <div class="section_btn_wrapper gyl_btn_wrapper">
+                  <div class="section_next_btn section_btn gyl_next"></div>
+                  <div class="section_prev_btn section_btn gyl_prev"></div>
+                </div>
+
+                <!-- 文本轮播 -->
+                <div class="text_banner">
+                  <div id="text_swiper" class="swiper">
+                    <div class="swiper-wrapper">
+                      <!-- 滑块 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 板块体 -->
+              <div class="section_body gyl_body">
+                <div
+                  id="gyl_content_swipwer"
+                  class="swiper section_content_swiper"
+                >
+                  <div class="swiper-wrapper"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 正在热播板块 -->
+            <div class="allkinds_section is_hot_showing">
+              <!-- 板块头 -->
+              <div class="section_header ihs_header">
+                <h3 class="section_title ihs_title">正在热播</h3>
+
+                <!-- 通用板块轮播按钮 -->
+                <div class="section_btn_wrapper ihs_btn_wrapper">
+                  <div class="section_next_btn section_btn ihs_next"></div>
+                  <div class="section_prev_btn section_btn ihs_prev"></div>
+                </div>
+                <!-- ↓ 头结束 -->
+              </div>
+              <!-- 板块体 -->
+              <div class="section_body ihs_body">
+                <div
+                  id="ihs_content_swipwer"
+                  class="swiper section_content_swiper"
+                >
+                  <div class="swiper-wrapper"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 电视剧板块 -->
+            <div class="allkinds_section TV_Drama tall_section">
+              <!-- 板块头 -->
+              <div class="section_header tvd_header">
+                <h3 class="section_title tvd_title">电视剧</h3>
+
+                <!-- 板块内部内容分类 -->
+                <div class="section_content_types tvd_type_list">
+                  <span class="content_type tvd_type">内地</span>
+                  <span class="content_type tvd_type">自制剧</span>
+                  <span class="content_type tvd_type">网络剧</span>
+                  <span class="content_type tvd_type">迷雾剧场</span>
+                  <span class="content_type tvd_type">恋恋剧场</span>
+                  <span class="content_type tvd_type">神剧亮了</span>
+                  <span class="content_type tvd_type more_tvd_type"
+                    >更多 ></span
+                  >
+                </div>
+
+                <!-- 通用板块轮播按钮 -->
+                <div class="section_btn_wrapper tvd_btn_wrapper">
+                  <div class="section_next_btn section_btn tvd_next"></div>
+                  <div class="section_prev_btn section_btn tvd_prev"></div>
+                </div>
+
+                <!-- ↓ 板块结束 -->
+              </div>
+
+              <!-- 板块体 -->
+              <div class="section_body tvd_body">
+                <div
+                  id="tvd_content_swipwer"
+                  class="swiper section_content_swiper"
+                >
+                  <div class="swiper-wrapper"></div>
+                  <!-- wrapper结束 -->
+                  <!-- <div class="swiper-button-next next_tvd"></div>
+                  <div class="swiper-button-prev prev_tvd"></div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 插入的广告：三等分版 -->
+            <div class="three_divided_ads">
+              <div class="ad_item">
+                <div class="imgBox">
+                  <img src="./images/imgs2/ad_three_01.jpg" alt="" />
+                </div>
+                <div class="ad_words">
+                  <div class="top_words">
+                    <p>这是广告词，这是广告词，这是广告词</p>
+                  </div>
+                  <div class="bottom_words">
+                    <p>广告&nbsp;&nbsp; 广告厂商1</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ad_item">
+                <div class="imgBox">
+                  <img src="./images/imgs2/ad_three_01.jpg" alt="" />
+                </div>
+                <div class="ad_words">
+                  <div class="top_words">
+                    <p>这是广告词，这是广告词，这是广告词</p>
+                  </div>
+                  <div class="bottom_words">
+                    <p>广告&nbsp;&nbsp; 广告厂商2</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ad_item">
+                <div class="imgBox">
+                  <img src="./images/imgs2/ad_three_01.jpg" alt="" />
+                </div>
+                <div class="ad_words">
+                  <div class="top_words">
+                    <p>这是广告词，这是广告词，这是广告词</p>
+                  </div>
+                  <div class="bottom_words">
+                    <p>广告&nbsp;&nbsp; 广告厂商3</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 电影板块 -->
+            <div class="allkinds_section movie_section tall_section">
+              <!-- 板块头 -->
+              <div class="section_header mov_header">
+                <h3 class="section_title mov_title">电影</h3>
+
+                <!-- 板块内部内容分类 -->
+                <div class="section_content_types mov_type_list">
+                  <span class="content_type mov_type">爱奇艺电影</span>
+                  <span class="content_type mov_type">爱奇艺文艺院线</span>
+                  <span class="content_type mov_type">爱奇艺独播专区</span>
+                  <span class="content_type mov_type">爱奇艺网络电影</span>
+                  <span class="content_type mov_type">云上北影节</span>
+                  <span class="content_type mov_type more_mov_type"
+                    >更多 ></span
+                  >
+                </div>
+
+                <!-- 通用板块轮播按钮 -->
+                <div class="section_btn_wrapper mov_btn_wrapper">
+                  <div class="section_next_btn section_btn mov_next"></div>
+                  <div class="section_prev_btn section_btn mov_prev"></div>
+                </div>
+
+                <!-- ↓ 板块结束 -->
+              </div>
+
+              <!-- 板块体 -->
+              <div class="section_body mov_body">
+                <div
+                  id="mov_content_swipwer"
+                  class="swiper section_content_swiper"
+                >
+                  <div class="swiper-wrapper"></div>
+                  <!-- wrapper结束 -->
+                  <!-- <div class="swiper-button-next next_mov"></div>
+      <div class="swiper-button-prev prev_mov"></div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 云影院板块 -->
+            <div class="allkinds_section cloud_cmsie_selected tall_section">
+              <!-- 板块头 -->
+              <div class="section_header cms_header">
+                <h3 class="section_title cms_title">云影院精选</h3>
+
+                <!-- 板块内部内容分类 -->
+                <div class="section_content_types cms_type_list">
+                  <span class="content_type cms_type more_cms_type"
+                    >更多 ></span
+                  >
+                </div>
+
+                <!-- 通用板块轮播按钮 -->
+                <div class="section_btn_wrapper cms_btn_wrapper">
+                  <div class="section_next_btn section_btn cms_next"></div>
+                  <div class="section_prev_btn section_btn cms_prev"></div>
+                </div>
+
+                <!-- ↓ 板块结束 -->
+              </div>
+
+              <!-- 板块体 -->
+              <div class="section_body cms_body">
+                <div
+                  id="cms_content_swipwer"
+                  class="swiper section_content_swiper"
+                >
+                  <div class="swiper-wrapper"></div>
+                  <!-- wrapper结束 -->
+                  <!-- <div class="swiper-button-next next_cms"></div>
+<div class="swiper-button-prev prev_cms"></div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 爱奇艺综艺板块 -->
+            <div class="allkinds_section qiyi_variety_show">
+              <!-- 板块头 -->
+              <div class="section_header qvs_header">
+                <h3 class="section_title qvs_title">综艺</h3>
+                <!-- 板块内部内容分类 -->
+                <div class="section_content_types qvs_type_list">
+                  <span class="content_type qvs_type">中国说唱巅峰对决</span>
+                  <span class="content_type qvs_type">萌萌探案</span>
+                  <span class="content_type qvs_type">来活了兄弟</span>
+                  <span class="content_type qvs_type">漂亮的战斗</span>
+                  <span class="content_type qvs_type">一起露营吧</span>
+                  <span class="content_type qvs_type">种地吧</span>
+                  <span class="content_type qvs_type more_qvs_type"
+                    >更多 ></span
+                  >
+                </div>
+                <!-- 通用板块轮播按钮 -->
+                <div class="section_btn_wrapper qvs_btn_wrapper">
+                  <div class="section_next_btn section_btn qvs_next"></div>
+                  <div class="section_prev_btn section_btn qvs_prev"></div>
+                </div>
+              </div>
+              <!-- 板块体 -->
+              <div class="section_body qvs_body">
+                <div
+                  id="qvs_content_swipwer"
+                  class="swiper section_content_swiper"
+                >
+                  <div class="swiper-wrapper"></div>
+                  <!-- wrapper结束 -->
+                  <!-- <div class="swiper-button-next next_qvs"></div>
+      <div class="swiper-button-prev prev_qvs"></div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 赛事直播板块 -->
+            <div class="allkinds_section maches_events_living">
+              <!-- 板块头 -->
+              <div class="section_header mel_header">
+                <h3 class="section_title mel_title">赛事直播</h3>
+                <!-- 板块内部内容分类 -->
+                <div class="section_content_types mel_type_list">
+                  <span class="content_type mel_type"
+                    >西班牙夺得欧洲联冠军</span
+                  >
+                  <span class="content_type mel_type"
+                    >曼城击败国米首夺欧冠冠军</span
+                  >
+                  <span class="content_type mel_type"
+                    >德约夺个人赛第23座大满贯</span
+                  >
+                  <span class="content_type mel_type more_mel_type"
+                    >赛程 ></span
+                  >
+                </div>
+                <!-- 通用板块轮播按钮 -->
+                <div class="section_btn_wrapper mel_btn_wrapper">
+                  <div class="section_next_btn section_btn mel_next"></div>
+                  <div class="section_prev_btn section_btn mel_prev"></div>
+                </div>
+              </div>
+              <!-- 板块体 -->
+              <div class="section_body mel_body">
+                <div
+                  id="mel_content_swipwer"
+                  class="swiper section_content_swiper"
+                >
+                  <div class="swiper-wrapper"></div>
+                  <!-- wrapper结束 -->
+                  <!-- <div class="swiper-button-next next_mel"></div>
+        <div class="swiper-button-prev prev_mel"></div> -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 插入广告：一长条版 -->
+            <div class="one_longbar_ads">
+              <span></span>
+            </div>
+
+            <!-- 推广广告：五条弹性伸缩广告 -->
+            <div class="allkinds_section five_ads_section">
+              <!-- 板块头 -->
+              <div class="section_header tvd_header">
+                <h3 class="section_title tvd_title">推广广告</h3>
+                <!-- 通用板块轮播按钮 -->
+                <!-- <div class="section_btn_wrapper tvd_btn_wrapper">
+                  <div class="section_next_btn section_btn tvd_next"></div>
+                  <div class="section_prev_btn section_btn tvd_prev"></div>
+                </div> -->
+
+                <!-- ↓ 板块结束 -->
+              </div>
+              <div class="five_ads_wrapper">
+                <div class="five_flex_ads">
+                  <div class="flex_ad_item">
+                    <div class="short_init">
+                      <img
+                        src="./images/imgs2/ad_five_flex01_short.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="long_hover">
+                      <img
+                        src="./images/imgs2/ad_five_flex01_long.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="flex_ad_item">
+                    <div class="short_init">
+                      <img
+                        src="./images/imgs2/ad_five_flex02_short.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="long_hover">
+                      <img
+                        src="./images/imgs2/ad_five_flex02_long.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="flex_ad_item">
+                    <div class="short_init">
+                      <img
+                        src="./images/imgs2/ad_five_flex03_short.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="long_hover">
+                      <img
+                        src="./images/imgs2/ad_five_flex03_long.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="flex_ad_item">
+                    <div class="short_init">
+                      <img
+                        src="./images/imgs2/ad_five_flex04_short.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="long_hover">
+                      <img
+                        src="./images/imgs2/ad_five_flex04_long.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="flex_ad_item">
+                    <div class="short_init">
+                      <img
+                        src="./images/imgs2/ad_five_flex05_short.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div class="long_hover">
+                      <img
+                        src="./images/imgs2/ad_five_flex05_long.webp"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="test_block">测试块</div> -->
+            <!-- ↓ main_wrapprer -->
+          </div>
+          <!-- ↓ main_body -->
+        </div>
+      </div>
+      <!-- 足部 -->
+      <div class="footer"></div>
+      <!-- 其他 -->
+      <div class="others">
+        <div class="loaded_vip_recommend">
+          <a href="">
+            <img src="./images/imgs2/00_whenloaded.png" alt="" />
+          </a>
+          <img
+            class="whenloaded_x"
+            src="./images/imgs2/00_whenloaded_x.png"
+            alt=""
+          />
+        </div>
+        <div class="lvr_mask"></div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/axios.min.js"></script>
+  <script src="./js/index.js"></script>
+</html>

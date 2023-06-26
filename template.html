@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<!-- 黑三角 -->
+<em class="triangle black_little_triangle"></em>
+
+<!-- 顶部下拉 -->
+<div class="draw_more" style="display: none">
+  <em class="triangle black_little_triangle"></em>
+</div>
+
+<!-- 黑三角通用样式 -->
+<style>
+  .triangle black_little_triangle {
+    background-color: rgb(36, 39, 46);
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    top: -4.2px;
+    left: 50%;
+    margin-left: -3.7px;
+  }
+</style>
+
+<!-- 滑动作用域 -->
+<div class="draw_function_scope"></div>
+
+<!-- 滑动作用域通用样式：测试版 -->
+<style>
+  .draw_function_scope {
+    position: absolute;
+    width: 50px;
+    height: 51px;
+    top: 0px;
+    left: 0px;
+    background-color: palegreen;
+    opacity: 0.5;
+  }
+</style>
+<!-- 滑动变绿 -->
+<style>
+  &:hover {
+    color: #00cc4c;
+  }
+</style>
+
+<span style="display: inline-block; transform: scale(1, 0.8) translateY(-1px)"
+  >〉</span>
