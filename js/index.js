@@ -278,23 +278,6 @@
   }
 })();
 
-function getData() {
-  axios
-    .get("./data/data.json")
-    .then((response) => {
-      return response.data;
-    })
-    .then((data) => {
-      // console.log(data);
-      // console.log(data[0]);
-      // {dataid: 1, img: './images/imgs2/banner01-chinarap.avif', title: '中国说唱', content: '临时抱佛脚真难听', bgcolor: '#363840'}
-      return data;
-    })
-    .catch((err) => {
-      // console.log(err);
-    });
-}
-
 //主体内容超多板块
 (function () {
   // 为板块们设置递减(逆向递增)的层级
@@ -1384,7 +1367,7 @@ if (!(swiper.isBeginning || swiper.isEnd)) {
       })
       .then((data) => {
         // console.log(data);
-        console.log(data[1].melSection);
+        // console.log(data[1].melSection);
         let { content } = data[1].melSection;
         // 渲染内容
         renderContent(content);
@@ -1520,16 +1503,19 @@ if (!(swiper.isBeginning || swiper.isEnd)) {
       // return;
     }
   } else {
-    console.log("没有");
+    // console.log("没有");
     let time = Date.now();
-    console.log("time", time);
+    // console.log("time", time);
     document.cookie = `vip_loaded=${time}`;
+    whenLoaded.style.display = "block";
+    lvrMask.style.display = "block";
   }
 
   let whenLoaded = document.querySelector(".others .loaded_vip_recommend");
   let whenLoadedX = whenLoaded.querySelector(".whenloaded_x");
   let lvrMask = document.querySelector(".others .lvr_mask");
-  console.log(whenLoaded, whenLoadedX, lvrMask);
+
+  // console.log(whenLoaded, whenLoadedX, lvrMask);
   document.addEventListener("DOMContentLoaded", function () {
     // 在 DOMContentLoaded 事件中执行的代码
     console.log("DOM 已加载完成");
